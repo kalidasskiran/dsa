@@ -1,0 +1,18 @@
+Binary sort
+package main
+
+import "fmt"
+
+func main() {
+
+	var a []int = []int{1, 9, 10, 11, 2}
+	for i, j := range a {
+		for b, k := range a {
+			if j < k {
+				a[i], a[b] = a[b], a[i]
+			}
+		}
+	}
+	fmt.Println(a)
+
+}
