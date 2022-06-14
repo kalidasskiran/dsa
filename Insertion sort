@@ -1,0 +1,23 @@
+// start from second element , move the number to the sorted position
+
+package main
+
+import "fmt"
+
+func main() {
+
+	var a []int = []int{1, 9, 10, 11, 2}
+
+	for i := 1; i < len(a); i++ {
+		j := i
+		for j >= 1 {
+			if a[j] < a[j-1] {
+				a[j], a[j-1] = a[j-1], a[j]
+			}
+			j--
+			fmt.Println(a)
+		}
+
+	}
+
+}
