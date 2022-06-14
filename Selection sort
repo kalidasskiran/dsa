@@ -1,0 +1,26 @@
+Selection sort // move min to start of second array
+package main
+
+import "fmt"
+
+func main() {
+	minind, min := 0, 0
+	var a []int = []int{1, 9, 10, 11, 2}
+	for i, j := range a {
+
+		for b, k := range a {
+			if j < k {
+				min = j
+				minind = i
+			} else {
+				min = k
+				minind = b
+
+			}
+		}
+		a[i], a[minind] = a[minind], a[i]
+	}
+	_, _ = minind, min
+	fmt.Println(a)
+
+}
